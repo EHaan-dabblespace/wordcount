@@ -1,0 +1,19 @@
+{% extends 'generic/base.html' %}
+
+{% block title%}
+<h1>COUNT</h1>
+{% endblock title %}
+
+
+{% block content %}
+<h3>Your text:</h3>
+{{ fulltext }}
+<br/>
+<p>There are {{ count }} words in this text.</p>
+
+<ul>
+{% for word, total in word_dict %}
+<li>{{ word }}: {{ total }}</li>
+{% endfor %}
+</ul>
+{% endblock content %}
